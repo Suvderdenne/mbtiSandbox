@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAVKA CV</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-purple-300 font-sans leading-normal tracking-normal">
+    <div class="container mx-auto mt-10 p-2 bg-green-200 shadow-lg rounded-lg flex pr-80 pl-80">
+        <div class="w-80 bg- p-5">
+            <div class="flex flex-col items-center md:flex-row md:items-start">
+                <img src="c:\Users\MU302-20\Pictures\lavka.png" alt="Your Photo" class="w-48 h-78 rounded-full border-4 border-black-300 mb-4 md:mb-0 ">
+            </div>
+        
+            <div class="mt-8">
+                <h2 class="text-2xl font-bold text-black border-b-2 border-black pb-2">Contact</h2>
+                <p class="text-black mt-4"><strong>Email:</strong> <span id="email">sw22d030@MANDAKH.EDU.MN </span></p>
+                <p class="text-black"><strong>Phone:</strong> <span id="phone"></span> </p>
+                <p class="text-black"><strong>Facebook:</strong><span id="facebook"></span>  </p>
+                <p class="text-black"><strong>GitHub:</strong> lhavka.github.com</p>
+            </div>
+
+            <div class="mt-8">
+                <h2 class="text-2xl font-bold text-black-700 pb-2">Skills</h2>
+                <ul id="skillsList"></ul>
+                <!-- <div class="mt-4">
+                    <span class="text-black-800 text-sm font-semibold mb-2">Python </span> <br>
+                    <span class="text-black-800 text-sm font-semibold mb-2">JavaScript</span> <br>
+                    <span class="text-balck-800 text-sm font-semibold mb-2">Tailwind CSS</span> <br>
+                    <span class="text-black-800 text-sm font-semibold mb-2">HTML</span><br>
+                    <span class="text-black-800 text-sm font-semibold mb-2">CSS</span>   
+                </div> -->
+            </div>
+        </div>
+        <div class="w-full ml-8">
+            <div class="md:ml-8 text-center md:text-left mt-8">
+                    <h1 class="text-4xl font-bold text-black-800">Oyuntsetseg Lhagvabaatar</h1>
+                    <p class="text-xl text-amber-300">Мэдээлэл, Технологын сургуулийн оюутан</p>
+                    <p class="text-black-500 mt-2">Mongolia-UB</p>
+            </div>
+
+            <div class="mt-8">
+                <h2 class="text-2xl font-bold text-black-700 border-b-2 border-black-300 pb-2">Experience</h2>
+                <div class="mt-4">
+                    <h3 class="text-xl font-semibold text-black-800">Бариста</h3>
+                    <p class="text-black-600">Next coffe shop</p>
+                    <p class="text-black-500">2020 - 2023</p>
+                    <ul class="list-disc list-inside text-black-600 mt-2">
+                        <li>Шек смүүти болон кофе бэлтгэх.</li>
+                        <li>Үйлчлүүлэгчдийн захиалгыг авах.</li>
+                        <li>Цэвэрлэгээ хийх.</li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <h3 class="text-xl font-semibold text-black-800">Front-end хөгжүүлэгч</h3>
+                    <p class="text-black-600">Мэдээлэл, Технологийн Сургууль - Танилцах дадлага</p>
+                    <p class="text-black-500">May 2023 - Present</p>
+                    <ul class="list-disc list-inside text-black-600 mt-2">
+                        <li>smt</li>
+                        <li>og mob</li>
+                        <li>solo</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <h2 class="text-2xl font-bold text-black-700 border-b-2 border-black-300 pb-2">Education</h2>
+                <div class="mt-4">
+                    <h3 class="text-xl font-semibold text-black-800">ЕБС</h3>
+                    <p class="text-black-600">Нийслэлийн Ерөнхий боловсролын 93 Сургууль</p>
+                    <p class="text-black-500">2010-2022</p>
+                </div>
+                <div class="mt-4">
+                    <h3 class="text-xl font-semibold text-black-800">Дээд боловсрол</h3> 
+                    <h6 class="text-l font-semibold text-black-800 mt-2">Бакалавр:</h6>
+                    <p class="text-black-600 mt-2">Мандах Их Сургууль Мэдээлэл, Технологын Сургууль</p>
+                    <p class="text-black-500">2022 оноос эхлэн суралцаж байна.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        fetch('cv.json')
+        .then(res=>res.json())
+        .then(data=>{
+            
+            email=document.getElementById('email').innerHTML=data.personal_details.email
+            phone=document.getElementById('phone').innerHTML=data.personal_details.phone
+            facebook=document.getElementById('facebook').innerHTML=data.personal_details.facebook
+            
+            const skillsList = document.getElementById("skillsList");
+            data.skills.forEach((skills)=>{
+              const li=document.createElement("li")
+              li.innerText = `${skills.skill}`;
+              skillsList.appendChild(li);
+                
+            })
+
+            console.log(data.skills)})
+    </script>
+</body>
+
+</html
