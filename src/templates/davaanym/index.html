@@ -1,15 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sandbox зуны дадлага 2024</title>
-    <link href="./output.css" rel="stylesheet" />
-  </head>
-  <body>
-    <h1 class="text-3xl font-bold underline">
-      Hello МТС! Энд нүүр хуудас байна
-    </h1>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <script src="script.js" defer></script>
+  <title>cv</title>
+</head>
+<body class="ml-10 mr-10" >
+  <header>
+    <div> 
+      <h1 class="text-center text-3xl" id="name"></h1>
+      <p class="text-center text-lg" id="jobTitle"></p>
+      <br>
+      <hr class="h-0.5 bg-gray-900">
+      <br>
+    </div>
+  </header>
+
+  <main class="flex flex-col lg:flex-row xl:flex-row ">
+    <br>
+    <aside class="w-full lg:w-1/3 p-2 lg:p-8 bg-gray-200 md:align-top md:w-1/3">
+      <section>
+        <p class="text-start text-2xl uppercase">Contact</p>
+        <br>
+        <div class="flex flex-row">
+          <img src="smartphone-call.png" class="h-10" alt="Phone icon">
+          <p class="ml-10" id="phone"></p>
+        </div>
+        <br>
+        <div class="flex flex-row">
+          <img src="pngwing.com.png" class="h-10" alt="Email icon">
+          <p class="ml-10" id="email"></p>
+        </div>
+        <br>
+        <div class="flex flex-row">
+          <img src="e1706ffea5612e41e0d85be430dea3d6.png" class="h-10" alt="Website icon">
+          <p class="ml-10" id="website"></p>
+        </div>
+        <br>
+        <div class="flex flex-row">
+          <img src="24fd419fb34d6f4cf37764baab8a1aa0.png" class="h-10" alt="Address icon">
+          <p class="ml-10" id="address"></p>
+        </div>
+        <br>
+        <hr class="h-0.5 bg-gray-900">
+        <br>
+      </section>
+      <section>
+        <p class="text-start text-2xl">Skills</p>
+        <br>
+        <div id="skills"></div>
+        <br>
+        <hr class="h-0.5 bg-gray-900">
+        <br>
+        <p class="text-start text-2xl">Education</p>
+        <br>
+        <p id="degree"></p>
+        <p id="institution"></p>
+        <p id="years"></p>
+        <p id="educationDesc"></p>
+        <br>
+      </section>
+    </aside>  
+    <br>
+    <div class="ml-10"></div>
+    <section class="w-full lg:w-1/3 bg-gray-200 md:w-1/3">
+      <div class="p-2 lg:p-8 "> 
+        <div class="flex flex-row">
+          <img src="e1706ffea5612e41e0d85be430dea3d6.png" class="h-10" alt="Profile icon">
+          <p class="text-start text-2xl ml-10">Profile</p>
+        </div>
+        <br>
+        <p id="profile"></p>
+      </div>
+      <div class="p-2 lg:p-8 ">
+        <div class="flex flex-row">
+          <img src="2f2bd63033464704b466d8e6fb9ffef3.png" class="h-10" alt="Work Experience icon">
+          <p class="text-start text-2xl ml-10">Work Experience</p>
+        </div>
+        <p id="workExperience"></p>
+        <br>
+        <p class="text-start text-2xl" id="jobPosition"></p>
+        <br>
+        <ul class="list-disc ml-5" id="workDetails"></ul>
+        <br>
+        <hr class="h-0.5 bg-gray-900">
+        <br>
+      </div>
+    </section>
+    <div class="mr-10"></div>
+    <br>
+    <aside class="w-full lg:w-1/3 p-2 lg:p-8 bg-gray-200 md:w-1/3">
+      <div class="flex flex-row">
+        <img src="51Za72bbVfL._AC_SY450_.jpg" class="h-100" alt="Profile Picture">
+      </div>
+      <br>
+      <hr class="h-0.5 bg-gray-900">
+      <br>
+      <section>
+        <p class="text-start text-2xl">Language</p>
+        <ul class="list-disc ml-5" id="languages"></ul>
+        <br>
+        <hr class="h-0.5 bg-gray-900">
+        <br>
+      </section>
+    </aside>
+  </main>
+</body>
 </html>
