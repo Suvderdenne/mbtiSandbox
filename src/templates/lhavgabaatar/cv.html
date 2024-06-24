@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LAVKA CV</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 
 <body class="bg-purple-300 font-sans leading-normal tracking-normal">
+    <div id="content">
     <div class="container mx-auto mt-10 p-2 bg-green-200 shadow-lg rounded-lg flex pr-80 pl-80">
         <div class="w-80 bg- p-5">
             <div class="flex flex-col items-center md:flex-row md:items-start">
-                <img src="c:\Users\MU302-20\Pictures\lavka.png" alt="Your Photo" class="w-48 h-78 rounded-full border-4 border-black-300 mb-4 md:mb-0 ">
+                <img src="lavka.png" alt="Your Photo" class="w-48 h-78 rounded-full border-4 border-black-300 mb-4 md:mb-0 ">
             </div>
         
             <div class="mt-8">
@@ -100,7 +103,50 @@
             })
 
             console.log(data.skills)})
+            
     </script>
+           <p>This content will be converted to a PDF file.</p>
+           <p>Add more HTML elements as needed.</p>
+       </div>
+       <button onclick="convertHTMLToPDF()">Download PDF</button>
+   
+       <script>
+           async function convertHTMLToPDF() {
+               const { jsPDF } = window.jspdf;
+   
+               // Get the HTML content
+               const content = document.getElementById('content');
+   
+               // Use html2canvas to capture the content
+               html2canvas(content).then(canvas => {
+                   const imgData = canvas.toDataURL('image/png');
+                   const doc = new jsPDF('p', 'mm', 'a4');
+   
+                   // Add the image to the PDF
+                   const imgWidth = 210; // A4 width in mm
+                   const pageHeight = 297; // A4 height in mm
+                   const imgHeight = canvas.height * imgWidth / canvas.width;
+                   let heightLeft = imgHeight;
+   
+                   let position = 0;
+   
+                   doc.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                   heightLeft -= pageHeight;
+   
+                   while (heightLeft >= 0) {
+                       position = heightLeft - imgHeight;
+                       doc.addPage();
+                       doc.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                       heightLeft -= pageHeight;
+                   }
+   
+                   // Save the PDF
+                   doc.save('document.pdf');
+               });
+           }
+        
+       </script>
+       </div>
 </body>
 
 </html
