@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="overflow-x-hidden h-screen">
+    <div id="contentToConvert" class="w-full lg:w-1/2 bg-pink-300 h-screen relative flex flex-col justify-center items-center">
+        <div class="bg-pink-100 h-80 w-80 rounded-full flex flex-col justify-center items-center px-4">
+            <img src="https://121clicks.com/wp-content/uploads/2018/02/alexandra_kirievskaya_fine_art_portrait_photography_21.jpg" class="rounded-full h-72 w-72">
+        </div>
+        <h1 class="text-lg md:text-xl lg:text-3xl text-pink-100 font-bold font-serif" id="firstname"></h1>
+        <h2 id="mergjil" class="text-md md:text-lg lg:text-xl mt-3 text-gray-500 font-bold font-serif"></h2>
+        <div class="w-2/3">
+            <p id="sum" class="text-white text-sm mt-4 md:text-md lg:text-lg"></p>
+        </div>
+        <hr class="bg-white w-4/5 h-0.5 mt-1">
+        <p id="dugr" class="text-white text-sm mt-4 md:text-md lg:text-lg"></p>
+        <p id="hayg" class="text-white text-sm mt-4 md:text-md lg:text-lg"></p>
+        <hr class="bg-white w-4/5 h-0.5 mt-1">
+        <section id="skills h-screen overflow-hidden">
+            <h2 class="ml-12 text-white text-lg md:text-xl lg:text-3xl">Skills</h2>
+            <ul id="skillsList" class="ml-12 text-black"></ul>
+        </section>
+    </div>
+    <div class="w-full lg:w-1/2 bg-pink-100 h-screen relative lg:absolute right-0 top-0">
+        <section id="experience">
+            <div class="w-auto h-10 bg-blue-950 m-12 pr-2">
+                <h2 class="ml-12 text-lg text-pink-100 md:text-xl lg:text-3xl">Experience</h2>
+            </div>
+            <ul id="experienceList" class="ml-8 mt-1 mr-2 font-serif text-blue-950 text-md md:text-lg lg:text-xl"></ul>
+        </section>
+        <section id="education">
+            <div class="w-auto h-10 bg-blue-950 m-12">
+                <h2 class="ml-12 text-pink-100 text-lg md:text-xl lg:text-3xl">Education</h2>
+            </div>
+            <ul id="educationList" class="ml-8 mt-1 mr-2 font-serif text-blue-950 text-md md:text-lg lg:text-xl"></ul>
+        </section>
+        <button id="downloadButton" class="bg-blue-950 ml-12 mt-8 text-white">DOWNLOAD PDF</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="scripttask2.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melanie Robinson CV</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-5">
+        <div class="header bg-green-500 text-white py-5">
+            <img src="https://img-cdn.hltv.org/playerbodyshot/4NNsZrSGWLr9mZNt0Pe3KS.png?ixlib=java-2.1.0&w=400&s=4484cc99087121a6f9877d3742717444" alt="Profile Picture" class="rounded-full w-24 h-24 mx-auto mb-2">
+            <h1 class="text-3xl font-bold text-center">Tamir"Null"Mendsaikhan</h1>
+            <p class="text-center">Team Chingis warriors</p>
+            <p class="text-center">The awper</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+            <div class="md:col-span-1">
+                <h2 class="text-lg font-bold text-gray-800 mb-2">History</h2> 
+                <p>aaaaaa bbbbb dshhfrew hofjbegog ewohfagfhwh eihgoghih ewhgjhsov  hashjfbe wghvewfbjasdb fhhehehhfhe fsdfasdefregfd avjarowqaofe rqawiiafckas afkwsjfchwh fasjwwwwww jfehhfvjd hajskejr efewfvas wfashkck swfdsjvk woqweoqojqkw anfasndfnew hrjesd wjdsakfqe rjfjcasnc vherwesik .</p>
+                
+                <h2 class="text-lg font-bold text-gray-800 mb-2">Skills</h2>
+                <p>ADR</p>
+                <div class="bg-gray-200 h-4 rounded-lg mb-2">
+                    <div class="bg-green-500 h-full rounded-lg" style="width:90%"></div>
+                </div>
+                <p>Dpr</p>
+                <div class="bg-gray-200 h-4 rounded-lg mb-2">
+                    <div class="bg-green-500 h-full rounded-lg" style="width:85%"></div>
+                </div>
+                <p>HLTV rating</p>
+                <div class="bg-gray-200 h-4 rounded-lg mb-2">
+                    <div class="bg-green-500 h-full rounded-lg" style="width:95%"></div>
+                </div>
+                <p>kda</p>
+                <div class="bg-gray-200 h-4 rounded-lg mb-2">
+                    <div class="bg-green-500 h-full rounded-lg" style="width:80%"></div>
+                </div>
+                <p>HS%</p>
+                <div class="bg-gray-200 h-4 rounded-lg mb-2">
+                    <div class="bg-green-500 h-full rounded-lg" style="width:90%"></div>
+                </div>
+            </div>
+            <div class="md:col-span-2">
+                <h2 class="text-lg font-bold text-gray-800 mb-2">aaaaaa</h2>
+                <h4 class="font-bold">sfhoiewshfjewqp owjeqfjhcviasdfhaweqs wkjck</h4>
+                <p><strong>kefgkek fkksanfkwe fjkqa wf dsfdwe</strong></p>
+                <p>04/2017 to 09/2018</p>
+                <ul class="list-disc list-inside mb-4">
+                    <li>Contact customer to follow up on purchases, suggest new merchandise and inform them about promotions and upcoming events.</li>
+                    <li>Promoted business as superior provider focused on improving accuracy with new business contacts and prospective customers.</li>
+                    <li>Answered average of 50+ calls, emails per day, addressing customer inquiries, solving problems and providing product information.</li>
+                </ul>
+
+                <h4 class="font-bold">Customer Service Representative</h4>
+                <p><strong>Foodspotting Inc., Chicago</strong></p>
+                <p>04/2015 to 09/2016</p>
+                <ul class="list-disc list-inside mb-4">
+                    <li>Assisted customers with food selection, inquiries and order customization requests.</li>
+                    <li>Trained an average of 100 call agents per quarter in taking calls, de-escalating angry customers and providing excellent customer service.</li>
+                    <li>Recommended potential products and services to management by collecting customer information and analyzing customer needs.</li>
+                </ul>
+
+                <h2 class="text-lg font-bold text-gray-800 mb-2">Education</h2>
+                <p>Bachelor of Arts: Marketing</p>
+                <p>Oregon State University - 2014</p>
+            </div>
+        </div>
+        <select id="fontSelect" onchange="selectFont(this.value)" class="bg-green-600 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+            <option value="Arial, sans-serif">Arial</option>
+            <option value="Georgia, serif">Georgia</option>
+            <option value="Verdana, sans-serif">Verdana</option>
+            <option value="Times New Roman, serif">Times New Roman</option>
+            <option value="Courier New, monospace">Courier New</option>
+        </select>
+
+    </div>
+    <script>
+        function selectFont(font) {
+            var body = document.querySelector('body');
+            body.style.fontFamily = font;
+        }
+    </script>
+</body>
+</html>

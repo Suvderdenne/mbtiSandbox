@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melanie Robinson CV</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-5">
+        <div class="header bg-green-500 text-white py-5">
+            <img id="profile-pic" src="https://img-cdn.hltv.org/playerbodyshot/4NNsZrSGWLr9mZNt0Pe3KS.png?ixlib=java-2.1.0&w=400&s=4484cc99087121a6f9877d3742717444" alt="Profile Picture" class="rounded-full w-24 h-24 mx-auto mb-2">
+            <h1 id="name" class="text-3xl font-bold text-center">Tamir "Null" Mendsaikhan</h1>
+            <p id="headline" class="text-center">Team Chingis Warriors</p>
+            <p class="text-center">The AWPer</p>
+        </div>
+        <div id="content" class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+            <div id="sidebar" class="md:col-span-1">
+                <h2 class="text-lg font-bold text-gray-800 mb-2">Personal Details</h2> 
+                <p id="address"></p>
+                <p id="phone"></p>
+                <p id="email"></p>
+                <p id="city"></p>
+
+                <h2 class="text-lg font-bold text-gray-800 mb-2">Skills</h2>
+                <div id="skills"></div>
+            </div>
+            <div class="md:col-span-2">
+                <h2 class="text-lg font-bold text-gray-800 mb-2">Summary</h2>
+                <p id="summary"></p>
+
+                <h2 class="text-lg font-bold text-gray-800 mb-2">Experience</h2>
+                <div id="experience"></div>
+
+                <h2 class="text-lg font-bold text-gray-800 mb-2">Education</h2>
+                <div id="education"></div>
+
+                <h2 class="text-lg font-bold text-gray-800 mb-2">Projects</h2>
+                <div id="projects"></div>
+
+                <h2 class="text-lg font-bold text-gray-800 mb-2">Certifications</h2>
+                <div id="certifications"></div>
+
+                <h2 class="text-lg font-bold text-gray-800 mb-2">Languages</h2>
+                <div id="languages"></div>
+
+                <h2 class="text-lg font-bold text-gray-800 mb-2">Hobbies</h2>
+                <div id="hobbies"></div>
+            </div>
+        </div>
+        <div class="flex justify-between mt-4">
+            <select id="fontSelect" onchange="selectFont(this.value)" class="bg-green-600 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+                <option value="Arial, sans-serif">Arial</option>
+                <option value="Georgia, serif">Georgia</option>
+                <option value="Verdana, sans-serif">Verdana</option>
+                <option value="Times New Roman, serif">Times New Roman</option>
+                <option value="Courier New, monospace">Courier New</option>
+            </select>
+            <button onclick="downloadPDF()" class="bg-blue-600 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+                Download as PDF
+            </button>
+        </div>
+    </div>
+    <script>
+        function selectFont(font) {
+            document.body.style.fontFamily = font;
+        }
+
+        async function fetchCVData() {
+            try {
+                const response = await fetch('data.json'); // Fetch data.json file
+                if (!response.ok) {
+                    throw new Error('Failed to fetch data');
+                }
+                const data = await response.json(); // Convert response to JSON format
+                populateCV(data); // Call populateCV function with fetched data
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                // Handle errors such as displaying a message to the user
+            }
+        }
+
+        function populateCV(data) {
+            document.getElementById('name').textContent = `${data.personal_details.firstname} ${data.personal_details.lastname}`;
+            document.getElementById('headline').textContent = data.personal_details.headline;
+            document.getElementById('address').textContent = data.personal_details.address;
+            document.getElementById('phone').textContent = data.personal_details.phone;
+            document.getElementById('email').textContent = data.personal_details.email;
+            document.getElementById('city').textContent = data.personal_details.city;
+
+            document.getElementById('summary').textContent = data.summary;
+
+            const skillsContainer = document.getElementById('skills');
+            data.skills.forEach(skill => {
+                const skillElement = document.createElement('p');
+                skillElement.textContent = skill.skill;
+                skillsContainer.appendChild(skillElement);
+
+                const skillBarContainer = document.createElement('div');
+                skillBarContainer.className = 'bg-gray-200 h-4 rounded-lg mb-2';
+                const skillBar = document.createElement('div');
+                skillBar.className = 'bg-green-500 h-full rounded-lg';
+                skillBar.style.width = `${skill.proficiency === 'Expert' ? 100 : skill.proficiency === 'Advanced' ? 80 : 60}%`;
+                skillBarContainer.appendChild(skillBar);
+                skillsContainer.appendChild(skillBarContainer);
+            });
+
+            const experienceContainer = document.getElementById('experience');
+            data.experience.forEach(job => {
+                const jobTitle = document.createElement('h4');
+                jobTitle.className = 'font-bold';
+                jobTitle.textContent = job.job_title;
+                experienceContainer.appendChild(jobTitle);
+
+                const companyInfo = document.createElement('p');
+                companyInfo.innerHTML = `<strong>${job.company}, ${job.location}</strong>`;
+                experienceContainer.appendChild(companyInfo);
+
+                const jobDates = document.createElement('p');
+                jobDates.textContent = `${job.start_date} to ${job.end_date}`;
+                experienceContainer.appendChild(jobDates);
+
+                const responsibilitiesList = document.createElement('ul');
+                responsibilitiesList.className = 'list-disc list-inside mb-4';
+                job.responsibilities.forEach(responsibility => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = responsibility;
+                    responsibilitiesList.appendChild(listItem);
+                });
+                experienceContainer.appendChild(responsibilitiesList);
+            });
+
+            const educationContainer = document.getElementById('education');
+            data.education.forEach(edu => {
+                const degree = document.createElement('p');
+                degree.innerHTML = `<strong>${edu.degree}</strong>, ${edu.institution}`;
+                educationContainer.appendChild(degree);
+
+                const eduDates = document.createElement('p');
+                eduDates.textContent = `${edu.start_year} - ${edu.graduation_year}`;
+                educationContainer.appendChild(eduDates);
+
+                const eduDescription = document.createElement('p');
+                eduDescription.textContent = edu.description;
+                educationContainer.appendChild(eduDescription);
+            });
+
+            const projectsContainer = document.getElementById('projects');
+            data.projects.forEach(project => {
+                const projectName = document.createElement('p');
+                projectName.innerHTML = `<strong>${project.name}</strong>`;
+                projectsContainer.appendChild(projectName);
+
+                const projectDescription = document.createElement('p');
+                projectDescription.textContent = project.description;
+                projectsContainer.appendChild(projectDescription);
+
+                const projectLink = document.createElement('a');
+                projectLink.href = project.url;
+                projectLink.textContent = project.url;
+                projectLink.className = 'text-blue-500 underline';
+                projectsContainer.appendChild(projectLink);
+            });
+
+            const certificationsContainer = document.getElementById('certifications');
+            data.certifications.forEach(cert => {
+                const certName = document.createElement('p');
+                certName.innerHTML = `<strong>${cert.name}</strong> - ${cert.institution} (${cert.year})`;
+                certificationsContainer.appendChild(certName);
+            });
+
+            const languagesContainer = document.getElementById('languages');
+            data.languages.forEach(language => {
+                const languageElement = document.createElement('p');
+                languageElement.textContent = `${language.language} (${language.proficiency})`;
+                languagesContainer.appendChild(languageElement);
+            });
+
+            const hobbiesContainer = document.getElementById('hobbies');
+            data.hobbies.forEach(hobby => {
+                const hobbyElement = document.createElement('p');
+                hobbyElement.textContent = hobby;
+                hobbiesContainer.appendChild(hobbyElement);
+            });
+        }
+
+        function downloadPDF() {
+            const element = document.body;
+            html2pdf().from(element).save('cv.pdf');
+        }
+
+        window.onload = fetchCVData;
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</body>
+</html>

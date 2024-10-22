@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish CV</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <div class="container mx-auto mt-10 p-5 bg-white shadow-2xl rounded-lg flex flex-col lg:flex-row lg:px-20">
+        <div class="w-full lg:w-1/3 bg-gray-800 text-white p-5 rounded-lg lg:rounded-none lg:rounded-l-lg">
+            <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
+                <img src="zurag.jpg" alt="Your Photo" class="w-48 h-48 rounded-full border-4 border-gray-300 mb-4 shadow-lg ">
+                
+                <h2 class="text-2xl font-bold mt-4">Contact</h2>
+                <div class="mt-4 text-gray-400 space-y-2">
+                    <p>Firstname: <span id="firstname"></span></p>
+                    <p>Lastname: <span id="lastname"></span></p>
+                    <p>Email: <span id="email"></span></p>
+                    <!-- <p><strong>Email:</strong> SsssW22D036@mandakh.edu.mn</p> -->
+                    <p>Phone: <span id="phone"></span></p>
+                    <!-- <p><strong>Phone:</strong> (976) 80442367</p> -->
+                    <p><strong>Facebook:</strong> П. Энхзул</p>
+                    <p><strong>GitHub:</strong> github.com/Enhzyl</p>
+                </div>
+                <h2 class="text-2xl font-bold mt-8">Skills</h2>
+                <div class="mt-4 space-y-2">
+                    
+                    <span class="block text-gray-400">Python</span>
+                    <span class="block text-gray-400">JavaScript</span>
+                    <span class="block text-gray-400">Tailwind CSS</span>
+                    <span class="block text-gray-400">HTML</span>
+                    <span class="block text-gray-400">CSS</span>
+                </div>
+            </div>
+        </div>
+        <div class="w-full lg:w-2/3 p-5">
+            <div class="text-center lg:text-left">
+                <h1 class="text-4xl font-bold text-gray-800">Пүрэвдаваа Энхзул</h1>
+                <p class="text-xl text-gray-600">Мэдээлэл, Технологийн сургуулийн оюутан</p>
+                <p class="text-gray-500 mt-2">Mongolia-UB</p>
+            </div>
+
+            <div class="mt-8">
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-gray-300 pb-2">Experience</h2>
+                <div class="mt-4 space-y-4">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800">Бариста</h3>
+                        <p class="text-gray-600">Caffe Bene</p>
+                        <p class="text-gray-500">2020 - 2023</p>
+                        <ul class="list-disc list-inside text-gray-600 mt-2 space-y-1">
+                            <li>Шек смүүти болон кофе бэлтгэх.</li>
+                            <li>Үйлчлүүлэгчдийн захиалгыг авах.</li>
+                            <li>Цэвэрлэгээ хийх.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800">Front-end хөгжүүлэгч</h3>
+                        <p class="text-gray-600">Мэдээлэл, Технологийн Сургууль - Танилцах дадлага</p>
+                        <p class="text-gray-500">May 2023 - Present</p>
+                        <ul class="list-disc list-inside text-gray-600 mt-2 space-y-1">
+                            <li>Хэрэглэгчдийн сонирхолыг татахуйц вэб хуудсыг зохион бүтээж, боловсруулж байгаа. </li>
+                            <li>Төслийн хүрээнд багаар ажиллах</li>
+                            <li>Төрөл бүрийн төхөөрөмжүүдийн нийцтэй байдлыг хангахын тулд Tailwindcss ашиглан template бэлтгэх.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-gray-300 pb-2">Education</h2>
+                <div class="mt-4 space-y-4">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800">ЕБС</h3>
+                        <p class="text-gray-600">Нийслэлийн Ерөнхий боловсролийн 52-р Сургууль</p>
+                        <p class="text-gray-500">2010-2022</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800">Дээд боловсрол</h3>
+                        <h6 class="text-l font-semibold text-gray-800 mt-2">Бакалавр:</h6>
+                        <p class="text-gray-600 mt-2">Мандах Их Сургууль Мэдээлэл, Технологийн сургууль</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js">
+    </script>
+</body>
+
+</html>
