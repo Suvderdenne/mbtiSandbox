@@ -8,7 +8,7 @@
 </head>
 <body class="bg-gray-100 p-6">
   <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-    <h1 class="text-3xl font-bold mb-4">Resume Form</h1> 
+    <h1 class="text-3xl font-bold mb-4">Resume Form</h1>   <a href="./home/index.html">back</a>
 
     <!-- Personal Details -->
     <section class="mb-6">
@@ -35,46 +35,35 @@
 
         <!-- Education -->
         <section class="mb-6">
-          <h2 class="text-2xl font-semibold mb-2">Education</h2>
-          <div id="educationFields">
-            <!-- Default education fields -->
-            <div class="education-entry">
-              <div class="grid grid-cols-2 gap-4">
-                <div>
-                  <label for="institution" class="block text-sm font-medium text-gray-700">Institution</label>
-                  <input type="text" name="institution" class="institution mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            <h2 class="text-2xl font-semibold mb-2">Education</h2>
+            <div id="educationFields">
+              <!-- Default education fields -->
+              <div class="education-entry">
+                <div class="grid grid-cols-2 gap-4">
+                  <div>
+                    <label for="institution" class="block text-sm font-medium text-gray-700">Institution</label>
+                    <input type="text" name="institution" class="institution mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                  </div>
+                  <div>
+                    <label for="degree" class="block text-sm font-medium text-gray-700">Degree</label>
+                    <input type="text" name="degree" class="degree mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                  </div>
                 </div>
-                <div>
-                  <label for="degree" class="block text-sm font-medium text-gray-700">Degree</label>
-                  <select name="degree" class="degree mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
-                    <option value="">-- Select Degree --</option>
-                    <option value="Бакалавр">Бакалавр</option>
-                    <option value="Магистр">Магистр</option>
-                    <option value="Доктор">Доктор</option>
-                    <option value="Бүрэн дунд">Бүрэн дунд</option>
-                    <option value="Суурь боловсрол">Суурь боловсрол</option>
-                  </select>
-                </div>
-              </div>
-              <div class="mt-4 grid grid-cols-2 gap-4">
-                <div>
-                  <label for="major" class="block text-sm font-medium text-gray-700">Major</label>
-                  <input type="text" name="major" class="major mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
-                </div>
-                <div>
-                  <label for="start_year" class="block text-sm font-medium text-gray-700">Start Year</label>
-                  <input type="number" name="start_year" class="start_year mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
-                </div>
-                <div>
-                  <label for="graduation_year" class="block text-sm font-medium text-gray-700">Graduation Year</label>
-                  <input type="number" name="graduation_year" class="graduation_year mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                <div class="mt-4 grid grid-cols-2 gap-4">
+                  <div>
+                    <label for="start_year" class="block text-sm font-medium text-gray-700">Start Year</label>
+                    <input type="number" name="start_year" class="start_year mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                  </div>
+                  <div>
+                    <label for="graduation_year" class="block text-sm font-medium text-gray-700">Graduation Year</label>
+                    <input type="number" name="graduation_year" class="graduation_year mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <button type="button" id="addEducationButton" class="mt-4 bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600">Add Education</button>
-        </section>
-
+            <button type="button" id="addEducationButton" class="mt-4 bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600">Add Education</button>
+          </section>
+          
         <!-- Skills -->
         <section class="mb-6">
           <h2 class="text-2xl font-semibold mb-2">Skills</h2>
@@ -118,68 +107,75 @@
           </div>
         </section>
 
-        <!-- Certifications -->
-        <section class="mb-6">
-          <h2 class="text-2xl font-semibold mb-2">Certification</h2>
-          <div class="grid grid-cols-2 gap-4">
+    </section>
+
+    <!-- certifications -->
+    <section class="mb-6">
+        <h2 class="text-2xl font-semibold mb-2">Certification</h2>
+        <div class="grid grid-cols-2 gap-4">
             <div>
-              <label for="cer_institution" class="block text-sm font-medium text-gray-700">Institution</label>
-              <input type="text" id="cer_institution" name="cer_institution" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            <label for="cer_institution" class="block text-sm font-medium text-gray-700">Institution</label>
+            <input type="text" id="cer_institution" name="cer_institution" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
             </div>
             <div>
-              <label for="cer_name" class="block text-sm font-medium text-gray-700">Name</label>
-              <input type="text" id="cer_name" name="cer_name" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            <label for="cer_name" class="block text-sm font-medium text-gray-700">Name</label>
+            <input type="text" id="cer_name" name="cer_name" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
             </div>
-          </div>
-          <div class="mt-4">
+        </div>
+        <div class="mt-4">
             <label for="cer_year" class="block text-sm font-medium text-gray-700">Year</label>
             <input type="number" id="cer_year" name="cer_year" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
-          </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Hobby -->
-        <section class="mb-6">
-          <h2 class="text-2xl font-semibold mb-2">Hobby</h2>
-          <div class="grid grid-cols-2 gap-4">
+    <!-- hobby -->
+    <section class="mb-6">
+        <h2 class="text-2xl font-semibold mb-2">Hobby</h2>
+        <div class="grid grid-cols-2 gap-4">
             <div>
-              <label for="hobby" class="block text-sm font-medium text-gray-700">Hobby</label>
-              <input type="text" id="hobby" name="hobby" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            <label for="hobby" class="block text-sm font-medium text-gray-700">hobby</label>
+            <input type="text" id="hobby" name="hobby" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
             </div>
-          </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Languages -->
-        <section class="mb-6">
-          <h2 class="text-2xl font-semibold mb-2">Language</h2>
-          <div class="grid grid-cols-2 gap-4">
+    <!-- languages -->
+    <section class="mb-6">
+        <h2 class="text-2xl font-semibold mb-2">Language</h2>
+        <div class="grid grid-cols-2 gap-4">
             <div>
-              <label for="lang_proficiency" class="block text-sm font-medium text-gray-700">Proficiency Level</label>
-              <select id="lang_proficiency" name="lang_proficiency" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            <div>
+            <label for="lang_proficiency" class="block text-sm font-medium text-gray-700">Proficiency Level</label>
+            <select id="lang_proficiency" name="lang_proficiency" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
                 <option value="Beginner">Beginner</option>
                 <option value="Intermediate">Intermediate</option>
                 <option value="Advanced">Advanced</option>
                 <option value="Expert">Expert</option>
-              </select>
+            </select>
             </div>
-          </div>
-        </section>
-
-        <!-- Submit Button -->
-        <div class="mt-6">
-          <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Submit</button>
         </div>
+    </section>
+  
 
-        <!-- Output Section -->
-        <section id="output" class="mt-6 hidden">
-          <h2 class="text-2xl font-semibold mb-2">Submitted Data</h2>
-          <pre id="dataOutput" class="bg-gray-200 p-4 rounded-md"></pre>
-        </section>
-      </form>
+
+
+    <!-- Submit Button -->
+
+    <div class="mt-6">
+        <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Submit</button>
+    </div>
+
+      <!-- dshfusd -->
+    <section id="output" class="mt-6 hidden">
+      <h2 class="text-2xl font-semibold mb-2">Submitted Data</h2>
+      <pre id="dataOutput" class="bg-gray-200 p-4 rounded-md"></pre>
     </section>
   </div>
+</form>
+</section>
 
   <script>
- document.getElementById("addEducationButton").addEventListener("click", function () {
+    document.getElementById("addEducationButton").addEventListener("click", function () {
   // Create a new education entry HTML block
   const newEducationEntry = document.createElement("div");
   newEducationEntry.classList.add("education-entry", "mt-4");
@@ -191,22 +187,8 @@
         <input type="text" name="institution" class="institution mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
       </div>
       <div>
-       <label for="degree" class="block text-sm font-medium text-gray-700">Degree</label>
-                  <select name="degree" class="degree mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
-                    <option value="">-- Select Degree --</option>
-                    <option value="Бакалавр">Бакалавр</option>
-                    <option value="Магистр">Магистр</option>
-                    <option value="Доктор">Доктор</option>
-                    <option value="Бүрэн дунд">Бүрэн дунд</option>
-                    <option value="Суурь боловсрол">Суурь боловсрол</option>
-                  </select>
-                </div>
-              </div>
-              <div class="mt-4 grid grid-cols-2 gap-4">
-                <div>
-                  <label for="major" class="block text-sm font-medium text-gray-700">Major</label>
-                  <input type="text" name="major" class="major mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
-                </div>
+        <label for="degree" class="block text-sm font-medium text-gray-700">Degree</label>
+        <input type="text" name="degree" class="degree mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
       </div>
     </div>
     <div class="mt-4 grid grid-cols-2 gap-4">
@@ -235,7 +217,6 @@ document.getElementById("registerForm").addEventListener("submit", function (eve
   educationEntries.forEach(function (entry) {
     const institution = entry.querySelector(".institution").value;
     const degree = entry.querySelector(".degree").value;
-    const major = entry.querySelector(".major").value;
     const start_year = entry.querySelector(".start_year").value;
     const graduation_year = entry.querySelector(".graduation_year").value;
 
@@ -243,7 +224,6 @@ document.getElementById("registerForm").addEventListener("submit", function (eve
     educationList.push({
       institution: institution,
       degree: degree,
-      major: major,
       start_year: parseInt(start_year),
       graduation_year: parseInt(graduation_year)
     });
