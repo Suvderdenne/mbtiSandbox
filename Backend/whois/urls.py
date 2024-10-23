@@ -1,8 +1,8 @@
-
-from django.contrib import admin
 from django.urls import path, include
+from whois_app.views import home
+from whois_app.viewscvreg import cvreg
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('whois/', include('whois_app.urls')),
+    path('', home, name='home'),
+    path('cvreg/', cvreg, name='cvreg'),
 ]

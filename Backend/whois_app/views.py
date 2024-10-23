@@ -95,24 +95,6 @@ GROUP BY
             result = sendResponse(200, data, action)
             return result
 
-def cv_register(request):
-    if request.method == 'POST':
-        try:
-            data = json.loads(request.body)
-            fname = data['firstname']
-            con = connectDB()
-            cur = con.cursor()
-            cur.execute(f'''insert into whois.t_person_details(firstname)
-                            VALUES('{fname}')''')
-            print('------------------------------------'+fname)
-            cur.close()
-            con.commit()
-            disconnectDB()
-            respRow = {'kakak': 'sa'}
-            return sendResponse(200, respRow)
-        except Exception as e:
-            return e
-
 
 @csrf_exempt
 def home(request):
@@ -126,10 +108,7 @@ def home(request):
             return JsonResponse(json.loads(result))
         if 'action' in jsons:
             action = jsons['action']
-            if action == "cv_register":
-                result = cv_register(request)
-                return JsonResponse(json.loads(result))
-            elif action == "getPerson":
+            if action == "getPerson":
                 result = getPerson(request)
                 return JsonResponse(json.loads(result))
             else:
