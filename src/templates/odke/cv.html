@@ -1,119 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Odke  - Software Engineer</title>
+    <title>Curriculum Vitae</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMcHih3B4jB0zp79y0V8/c5Yk6b3eE8TdrD9vH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Google Font -->
+    <style>
+        /* Зурагны хүрээ нэмэх */
+        .profile-image {
+            border: 4px solid #d7d9d9; /* Цагаан хүрээ */
+        }
+        body {
+            font-family: 'Roboto', sans-serif; 
+        }
+    </style>
 </head>
-<body class="bg-gray-100 font-sans">
-    <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8 mt-10">
-        <header class="text-center">
-            <h1 class="text-4xl font-bold text-gray-800">Odke </h1>
-            <h2 class="text-xl text-gray-600">my tailwind cv</h2>
-            <hr class="my-4">
+
+<body class="bg-gray-100">
+    <div class="max-w-3xl mx-auto p-8 bg-white shadow-lg rounded-lg">
+        <header class="flex items-center bg-gray-900 text-white p-6 rounded-lg mb-6">
+            <img src="wl.jpg" alt="Your Name" class="w-64 h-64 rounded-lg profile-image mr-6 object-cover -mb-10">
+            <div class="text-center ml-20">
+                <h1 class="text-5xl font-bold">Your Name</h1>
+                <p class="text-2xl text-gray-500">Your Job Title</p>
+            </div>
         </header>
-        <section class="flex justify-between">
-            <aside class="w-1/3">
-                <section class="mb-6">
-                    <h6 class="font-semibold text-gray-800">Contact</h6>
-                    <ul class="text-gray-600">
-                        <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:4153234000">(415) 323-4000</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:joe@joesmith.site">joe@joesmith.site</a></li>
-                        <li><i class="fas fa-globe"></i> <a href="https://joesmith.site">joesmith.site</a></li>
-                        <li><i class="fab fa-github"></i> <a href="https://github.com/Tombarr">github.com/Tombarr</a></li>
-                    </ul>
-                </section>
-                <section class="mb-6">
-                    <h6 class="font-semibold text-gray-800">Skills</h6>
-                    <ul class="text-gray-600 list-disc pl-5">
-                        <li>oglo bur yarmagaas irdeg </li>
-                        <li>abyn ailiin erh ohin </li>
-                        <li> huvida housete </li>
-                        <li> 3 davhar house </li>
-                        <li></li>
-                    </ul>
-                </section>
+        
+        <div class="flex mt-8">
+            <!-- Зүүн div -->
+            <div class="w-1/3 bg-gray-100 rounded-lg p-5">
+                <!-- Certifications -->
                 <section>
-                    <h6 class="font-semibold text-gray-800">Technologies</h6>
-                    <ul class="text-gray-600 list-disc pl-5">
-                        <li>JavaScript</li>
-                        <li>PHP</li>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>Bootstrap</li>
-                        <li>React</li>
+                    <h2 class="text-2xl font-semibold   ">Certifications</h2>
+                    <hr class="my-2 border-gray-300">
+                    <ul class="list-disc list-inside mt-2 text-gray-600">
+                        <li>Certification Name - Issuer (Year)</li>
+                        <li>Certification Name - Issuer (Year)</li>
                     </ul>
                 </section>
-                <section class="mt-6">
-                    <h6 class="font-semibold text-gray-800">References</h6>
-                    <address class="text-gray-600">
-                        <p>Jane Doe<br>Alphabet Inc.<br>(413) 025-1900<br>jane@janedoe.site</p>
-                        <p>Luke O'Connor<br>Facebook<br>(413) 125-1400<br>luke@facebook.site</p>
-                    </address>
-                </section>
-            </aside>
-            <main class="w-2/3">
-                <section class="mb-6">
-                    <h6 class="font-semibold text-gray-800">Summary</h6>
-                    <p class="text-gray-600">Deadline-oriented software engineer with lots of experience. Solid track record of architecting solutions that exceed client expectations.</p>
-                </section>
-                <section class="mb-6">
-                    <h6 class="font-semibold text-gray-800">Experience</h6>
-                    <ol class="list-decimal pl-5 text-gray-600">
-                        <li>
-                            <p class="font-semibold">Senior Software Engineer <span class="text-gray-500">(2016 – Present)</span></p>
-                            <span>Google</span>
-                            <ul class="list-disc pl-5">
-                                <li>Developed scalable database indexing technology</li>
-                                <li>Created GraphQL APIs for accessing Google Earth</li>
-                                <li>Leveraged Waymo datasets to double traffic statistics accuracy</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p class="font-semibold">Software Engineer <span class="text-gray-500">(2014 – 2016)</span></p>
-                            <span>Facebook</span>
-                            <ul class="list-disc pl-5">
-                                <li>Collected political affiliation data from millions of users</li>
-                                <li>Authored user stories and mapped user journeys</li>
-                                <li>Introduced regression testing to Yoga layout framework</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p class="font-semibold">Software Engineer Intern <span class="text-gray-500">(2013 – 2014)</span></p>
-                            <span>Twitter</span>
-                            <ul class="list-disc pl-5">
-                                <li>Analyzed and optimized code coverage across Scala architecture</li>
-                                <li>Created project environment setup XML files</li>
-                                <li>Maintained TCP/IP connections with 250,000 concurrent users</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p class="font-semibold">Independent iOS Engineer <span class="text-gray-500">(2012 – Present)</span></p>
-                            <ul class="list-disc pl-5">
-                                <li>Developed SuperUltraCoolWeather app using AccuWeather API</li>
-                                <li>Shipped products to more than 1,000,000 daily active users</li>
-                            </ul>
-                        </li>
-                    </ol>
-                </section>
+
+                <!-- Languages -->
                 <section>
-                    <h6 class="font-semibold text-gray-800">Education</h6>
-                    <ol class="list-decimal pl-5 text-gray-600">
-                        <li>
-                            <p class="font-semibold">M.S., Human Computer Interaction <span class="text-gray-500">(Sept '12 – May '14)</span></p>
-                            <span>Massachusetts Institute of Technology</span>
-                        </li>
-                        <li>
-                            <p class="font-semibold">B.S., Computer Science <span class="text-gray-500">(Sept '08 – May '12)</span></p>
-                            <span>Harvard University - GPA: 3.91</span>
-                        </li>
-                    </ol>
+                    <h2 class="text-2xl font-semibold    mt-8">Languages</h2>
+                    <hr class="my-2 border-gray-300">
+                    <ul class="list-disc list-inside mt-2 text-gray-600">
+                        <li>English - Fluent</li>
+                        <li>Mongolian - Native</li>
+                        <li>French - Intermediate</li>
+                        <li>German - Basic</li>
+                    </ul>
                 </section>
-            </main>
-        </section>
+
+                <!-- Skills -->
+                <section>
+                    <h2 class="text-2xl font-semibold    mt-8">Skills</h2>
+                    <hr class="my-2 border-gray-300">
+                    <ul class="list-disc list-inside mt-2 text-gray-600">
+                        <li>Skill 1</li>
+                        <li>Skill 2</li>
+                        <li>Skill 3</li>
+                        <li>Skill 4</li>
+                    </ul>
+                </section>
+
+                <!-- Hobbies -->
+                <section class="mt-8">
+                    <h2 class="text-2xl font-semibold   ">Hobbies</h2>
+                    <hr class="my-2 border-gray-300">
+                    <ul class="list-disc list-inside mt-2 text-gray-600">
+                        <li>Hobby 1</li>
+                        <li>Hobby 2</li>
+                        <li>Hobby 3</li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- Баруун div -->
+            <div class="w-2/3 pl-8">
+                <!-- Education -->
+                <section>
+                    <h2 class="text-2xl font-semibold   ">Education</h2>
+                    <hr class="my-2 border-gray-300">
+                    <div class="mt-4">
+                        <h3 class="text-xl font-semibold text-gray-700">Degree - Institution Name</h3>
+                        <p class="text-gray-500">Month Year - Month Year</p>
+                        <p class="text-gray-600">Relevant coursework or honors received.</p>
+                    </div>
+                </section>
+
+                <!-- Experience -->
+                <section class="mt-8">
+                    <h2 class="text-2xl font-semibold   ">Experience</h2>
+                    <hr class="my-2 border-gray-300">
+                    <div class="mt-4">
+                        <h3 class="text-xl font-semibold text-gray-700">Job Title - Company Name</h3>
+                        <p class="text-gray-500">Month Year - Present</p>
+                        <ul class="list-disc list-inside mt-2 text-gray-600">
+                            <li>Key responsibility or achievement</li>
+                            <li>Another responsibility or achievement</li>
+                        </ul>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-semibold text-gray-700">Previous Job Title - Previous Company Name</h3>
+                        <p class="text-gray-500">Month Year - Month Year</p>
+                        <ul class="list-disc list-inside mt-2 text-gray-600">
+                            <li>Key responsibility or achievement</li>
+                            <li>Another responsibility or achievement</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Summary -->
+                <section>
+                    <h2 class="text-2xl font-semibold    mt-8">Summary</h2>
+                    <hr class="my-2 border-gray-300">
+                    <p class="mt-2 text-gray-600">A brief summary of your professional background, skills, and what you can bring to a potential employer.</p>
+                </section>
+            </div>
+        </div>
     </div>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
