@@ -1,0 +1,39 @@
+{
+  "action": "addCv",
+  "data": [
+    {
+      "personal_details": {
+        "address": "Чингэлтэй",
+        "lastname": "Сүхбаатар"
+      },
+      "education": [
+        {
+          "institution": "Хүмүүнлэг",
+          "start_year": 2020
+        },
+        {
+          "institution": "National univercity of Japan",
+          "start_year": 2019
+        }
+      ],
+      "experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "responsibilities": [
+            "Lead a team of 5 engineers to develop and maintain a cloud-based SaaS platform.",
+            "Implement microservices architecture to improve scalability and reduce latency.",
+            "Conduct code reviews and mentor junior developers."
+          ]
+        },
+        {
+          "company": "Tech Solutions Inc.",
+          "responsibilities": [
+            "Lead a team of 5 engineers to develop and maintain a cloud-based SaaS platform.",
+            "Implement microservices architecture to improve scalability and reduce latency.",
+            "Conduct code reviews and mentor junior developers."
+          ]
+        }
+      ]
+    }
+  ]
+}
