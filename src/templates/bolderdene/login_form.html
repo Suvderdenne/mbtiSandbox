@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+    <h2 class="text-2xl font-bold mb-6 text-center">Login</h2>
+
+    <!-- Login Form -->
+    <form action="#" method="POST" class="space-y-4" id="form">
+
+      <!-- username -->
+      <div>
+        <label for="text" class="block text-sm font-medium text-gray-700">Username</label>
+        <input type="text" id="username" name="email"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+      </div>
+
+      <!-- Password -->
+      <div>
+        <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+        <input type="password" id="password" name="password" required
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+      </div>
+
+      <!-- Remember Me -->
+      <div class="flex items-center">
+        <input type="checkbox" id="remember-me" name="remember-me"
+          class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+        <label for="remember-me" class="ml-2 block text-sm text-gray-900">Remember me</label>
+      </div>
+
+      <!-- Submit Button -->
+      <div>
+        <button type="submit"
+          class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Login</button>
+      </div>
+
+      <!-- Forgot Password Link -->
+      <div class="text-center mt-4">
+        <a href="#" class="text-sm text-blue-500 hover:underline">Forgot your password?</a>
+      </div>
+
+    </form>
+  </div>
+  <script>
+    const form = document.getElementById('form')
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const formData = {
+        action: "login_cv",
+        personal_details: {
+          username: document.getElementById('username').value,
+          password: document.getElementById('password').value
+        }
+      }
+
+
+      url = "http://127.0.0.1:8000/api/addCv/"
+      fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          // 'X-CSRFToken': getCookie('csrftoken')
+        },
+        body: JSON.stringify(formData
+        )
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.resultCode === 200) {
+            const pid = data.pid;
+            alert(data.data[0].success)
+            // Store the pid for later use, such as in localStorage or sessionStorage
+            localStorage.setItem('pid', pid);
+            window.location.href = "../lhavgabaatar/index.html"; // Redirect to the home page or another page
+          } else {
+            alert(data.data[0].error);
+          }
+        })
+        .catch((error) => alert('Серверийн алдаа:', error));
+
+    }
+    )
+
+  </script>
+</body>
+
+</html>

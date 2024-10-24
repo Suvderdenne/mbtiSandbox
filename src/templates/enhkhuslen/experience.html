@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Experience Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-2xl mx-auto bg-white p-6 rounded-md shadow-md">
+        <h2 class="text-2xl font-semibold mb-4">Add Work Experience</h2>
+        <form id="experienceForm" class="space-y-4">
+            <div>
+                <label for="job_title" class="block text-sm font-medium text-gray-700">Job Title</label>
+                <input type="text" id="job_title" name="job_title" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div>
+                <label for="company" class="block text-sm font-medium text-gray-700">Company</label>
+                <input type="text" id="company" name="company" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div>
+                <label for="location" class="block text-sm font-medium text-gray-700">Location</label>
+                <input type="text" id="location" name="location" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div>
+                <label for="start_date" class="block text-sm font-medium text-gray-700">Start Date</label>
+                <input type="month" id="start_date" name="start_date" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div>
+                <label for="end_date" class="block text-sm font-medium text-gray-700">End Date</label>
+                <input type="month" id="end_date" name="end_date" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div>
+                <label for="responsibilities" class="block text-sm font-medium text-gray-700">Responsibilities</label>
+                <textarea id="responsibilities" name="responsibilities" rows="4" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+                <small class="text-gray-500">List responsibilities separated by commas.</small>
+            </div>
+
+            <div class="text-right">
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md shadow hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Add Experience</button>
+            </div>
+        </form>
+        <pre id="result" class="mt-4 p-4 bg-gray-200 rounded"></pre>
+    </div>
+
+    <script>
+        document.getElementById('experienceForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            const data = {
+                job_title: formData.get('job_title'),
+                company: formData.get('company'),
+                location: formData.get('location'),
+                start_date: formData.get('start_date'),
+                end_date: formData.get('end_date'),
+                responsibilities: formData.get('responsibilities').split(',').map(item => item.trim())
+            };
+
+            // Display JSON in the <pre> element
+            document.getElementById('result').textContent = JSON.stringify(data, null, 2);
+                        
+        });
+    </script>
+</body>
+</html>

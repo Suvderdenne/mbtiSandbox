@@ -116,89 +116,90 @@
             });
         }
 
-        fetch('example.json')
-    .then(res => res.json())
-    .then(data => {
-        const personalDetails = data.data[0].personal_details;
+    //     fetch('example.json')
+    // .then(res => res.json())
+    // .then(data => {
+    //     const personalDetails = data.data[0].personal_details;
 
-        // Fill in personal information
-        document.getElementById('firstname').innerHTML += personalDetails.firstname;
-        document.getElementById('lastname').innerHTML += personalDetails.lastname;
-        document.getElementById('address').innerHTML += personalDetails.address;
-        document.getElementById('city').innerHTML += personalDetails.city;
-        document.getElementById('email').innerHTML += personalDetails.email;
-        document.getElementById('phone').innerHTML += personalDetails.phone;
+    //     // Fill in personal information
+    //     document.getElementById('firstname').innerHTML += personalDetails.firstname;
+    //     document.getElementById('lastname').innerHTML += personalDetails.lastname;
+    //     document.getElementById('address').innerHTML += personalDetails.address;
+    //     document.getElementById('city').innerHTML += personalDetails.city;
+    //     document.getElementById('email').innerHTML += personalDetails.email;
+    //     document.getElementById('phone').innerHTML += personalDetails.phone;
         
-        // Fill in social links
-        document.getElementById('facebook').innerHTML = "Facebook";
-        document.getElementById('facebook').href = personalDetails.facebook;
-        document.getElementById('linkedin').innerHTML = "LinkedIn";
-        document.getElementById('linkedin').href = personalDetails.linkedin;
-        document.getElementById('github').innerHTML = "GitHub";
-        document.getElementById('github').href = personalDetails.github;
+    //     // Fill in social links
+    //     document.getElementById('facebook').innerHTML = "Facebook";
+    //     document.getElementById('facebook').href = personalDetails.facebook;
+    //     document.getElementById('linkedin').innerHTML = "LinkedIn";
+    //     document.getElementById('linkedin').href = personalDetails.linkedin;
+    //     document.getElementById('github').innerHTML = "GitHub";
+    //     document.getElementById('github').href = personalDetails.github;
 
-        // Fill in hobbies
-        data.data[0].hobbies.forEach(hobby => {
-            const li = document.createElement('li');
-            li.textContent = hobby;
-            document.getElementById('hobbies').appendChild(li);
-        });
+    //     // Fill in hobbies
+    //     data.data[0].hobbies.forEach(hobby => {
+    //         const li = document.createElement('li');
+    //         li.textContent = hobby;
+    //         document.getElementById('hobbies').appendChild(li);
+    //     });
 
-        // Fill in languages
-        data.data[0].languages.forEach(language => {
-            const li = document.createElement('li');
-            li.textContent = `${language.language} (${language.proficiency})`;
-            document.getElementById('languages').appendChild(li);
-        });
+    //     // Fill in languages
+    //     data.data[0].languages.forEach(language => {
+    //         const li = document.createElement('li');
+    //         li.textContent = `${language.language} (${language.proficiency})`;
+    //         document.getElementById('languages').appendChild(li);
+    //     });
 
-        // Fill in summary
-        document.getElementById('summary').textContent = data.data[0].summary;
+    //     // Fill in summary
+    //     document.getElementById('summary').textContent = data.data[0].summary;
 
-        // Fill in projects
-        data.data[0].projects.forEach(project => {
-            const div = document.createElement('div');
-            div.innerHTML = `<p class="font-bold text-gray-700">${project.name}</p>
-                             <p class="text-gray-500">${project.description}</p>
-                             <a class="text-blue-500" href="${project.url}" target="_blank">${project.url}</a>`;
-            document.getElementById('projects').appendChild(div);
-        });
+    //     // Fill in projects
+    //     data.data[0].projects.forEach(project => {
+    //         const div = document.createElement('div');
+    //         div.innerHTML = `<p class="font-bold text-gray-700">${project.name}</p>
+    //                          <p class="text-gray-500">${project.description}</p>
+    //                          <a class="text-blue-500" href="${project.url}" target="_blank">${project.url}</a>`;
+    //         document.getElementById('projects').appendChild(div);
+    //     });
 
-        // Fill in experience
-        data.data[0].experience.forEach(exp => {
-            const div = document.createElement('div');
-            div.innerHTML = `<p class="font-bold text-gray-700">${exp.job_title}, ${exp.company}</p>
-                             <p class="text-gray-500">${exp.location}</p>
-                             <p class="text-gray-500">${exp.start_date} - ${exp.end_date}</p>
-                             <ul class="list-disc ml-5 text-gray-600">${exp.responsibilities.map(res => `<li>${res}</li>`).join('')}</ul>`;
-            document.getElementById('experience').appendChild(div);
-        });
+    //     // Fill in experience
+    //     data.data[0].experience.forEach(exp => {
+    //         const div = document.createElement('div');
+    //         div.innerHTML = `<p class="font-bold text-gray-700">${exp.job_title}, ${exp.company}</p>
+    //                          <p class="text-gray-500">${exp.location}</p>
+    //                          <p class="text-gray-500">${exp.start_date} - ${exp.end_date}</p>
+    //                          <ul class="list-disc ml-5 text-gray-600">${exp.responsibilities.map(res => `<li>${res}</li>`).join('')}</ul>`;
+    //         document.getElementById('experience').appendChild(div);
+    //     });
 
-        // Fill in education
-        data.data[0].education.forEach(edu => {
-            const div = document.createElement('div');
-            div.innerHTML = `<h3 class="font-bold text-gray-700">${edu.degree}</h3>
-                             <p class="text-gray-500">${edu.institution}, ${edu.start_year} - ${edu.graduation_year}, ${edu.location}</p>
-                             <p class="text-gray-500">${edu.description}</p>`;
-            document.getElementById('education').appendChild(div);
-        });
+    //     // Fill in education
+    //     data.data[0].education.forEach(edu => {
+    //         const div = document.createElement('div');
+    //         div.innerHTML = `<h3 class="font-bold text-gray-700">${edu.degree}</h3>
+    //                          <p class="text-gray-500">${edu.institution}, ${edu.start_year} - ${edu.graduation_year}, ${edu.location}</p>
+    //                          <p class="text-gray-500">${edu.description}</p>`;
+    //         document.getElementById('education').appendChild(div);
+    //     });
 
-        // Fill in certifications
-        data.data[0].certifications.forEach(cert => {
-            const li = document.createElement('li');
-            li.textContent = `${cert.name} - ${cert.institution} (${cert.year})`;
-            document.getElementById('certifications').appendChild(li);
-        });
+    //     // Fill in certifications
+    //     data.data[0].certifications.forEach(cert => {
+    //         const li = document.createElement('li');
+    //         li.textContent = `${cert.name} - ${cert.institution} (${cert.year})`;
+    //         document.getElementById('certifications').appendChild(li);
+    //     });
 
-        // Fill in skills
-        data.data[0].skills.forEach(skill => {
-            const li = document.createElement('li');
-            li.textContent = `${skill.skill} (${skill.proficiency})`;
-            document.getElementById('skills').appendChild(li);
-        });
-    })
-    .catch(err => console.error(err));
+    //     // Fill in skills
+    //     data.data[0].skills.forEach(skill => {
+    //         const li = document.createElement('li');
+    //         li.textContent = `${skill.skill} (${skill.proficiency})`;
+    //         document.getElementById('skills').appendChild(li);
+    //     });
+    // })
+    // .catch(err => console.error(err));
 
     </script>
+    <script src="../main.js"></script>
 </body>
 
 </html>

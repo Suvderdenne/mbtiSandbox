@@ -1,149 +1,40 @@
 {
-    "action": "example",
-    "curdate": "2024/10/22 14:51:21",
+    "action": "addCv",
     "data": [
-        {
-            "certifications": [
-                {
-                    "institution": "Amazon Web Services",
-                    "name": "AWS Certified Solutions Architect",
-                    "year": 2020
-                },
-                {
-                    "institution": "Cloud Native Computing Foundation",
-                    "name": "Certified Kubernetes Administrator",
-                    "year": 2019
-                }
-            ],
-            "education": [
-                {
-                    "degree": "Master of Science in Computer Science",
-                    "description": "Focused on artificial intelligence and machine learning. Completed a thesis on deep learning algorithms for natural language processing. Participated in various research projects and collaborated with leading experts in the field.",
-                    "graduation_year": 2020,
-                    "institution": "Stanford University",
-                    "location": "Stanford, CA",
-                    "start_year": 2016
-                },
-                {
-                    "degree": "Bachelor of Science in Computer Science",
-                    "description": "Specialized in software engineering and data structures. Graduated with honors and received the Dean's List award for academic excellence. Engaged in extracurricular activities such as coding competitions and hackathons.",
-                    "graduation_year": 2018,
-                    "institution": "University of Illinois at Urbana-Champaign",
-                    "location": "Champaign, IL",
-                    "start_year": 2016
-                }
-            ],
-            "experience": [
-                {
-                    "company": "Tech Solutions Inc.",
-                    "end_date": "Present",
-                    "job_title": "Senior Software Engineer",
-                    "location": "Chicago, IL",
-                    "responsibilities": [
-                        "Lead a team of 5 engineers to develop and maintain a cloud-based SaaS platform.",
-                        "Implement microservices architecture to improve scalability and reduce latency.",
-                        "Conduct code reviews and mentor junior developers."
-                    ],
-                    "start_date": "2021-06"
-                },
-                {
-                    "company": "Innovative Apps LLC",
-                    "end_date": "2021-05",
-                    "job_title": "Software Engineer",
-                    "location": "Springfield, IL",
-                    "responsibilities": [
-                        "Developed front-end and back-end components for various web applications.",
-                        "Collaborated with UX/UI designers to create user-friendly interfaces.",
-                        "Optimized application performance, reducing load times by 30%."
-                    ],
-                    "start_date": "2018-07"
-                }
-            ],
-            "hobbies": [
-                "Hiking",
-                "Photography",
-                "Traveling"
-            ],
-            "languages": [
-                {
-                    "language": "English",
-                    "proficiency": "Native"
-                },
-                {
-                    "language": "Spanish",
-                    "proficiency": "Intermediate"
-                }
-            ],
-            "personal_details": {
-                "address": "1234 Elm Street, Apt 567, Springfield, IL 62704, USA",
-                "city": "Ulaanbaatar",
-                "email": "john.doe@example.com",
-                "facebook": "https://fb.com/johndoe",
-                "firstname": "John",
-                "github": "https://github.com/johndoe",
-                "headline": "uuriin tuhai",
-                "lastname": "Boldoo",
-                "linkedin": "https://www.linkedin.com/in/johndoe",
-                "phone": "+1-234-567-8901"
-            },
-            "projects": [
-                {
-                    "description": "Developed a full-stack e-commerce platform using React, Node.js, and MongoDB. Implemented features such as product listings, shopping cart, and payment processing.",
-                    "name": "E-commerce Platform",
-                    "url": "https://github.com/johndoe/ecommerce-platform"
-                },
-                {
-                    "description": "Built a real-time chat application using Django Channels and WebSockets. Integrated with a PostgreSQL database for persistent storage.",
-                    "name": "Chat Application",
-                    "url": "https://github.com/johndoe/chat-application"
-                }
-            ],
-            "skills": [
-                {
-                    "proficiency": "Expert",
-                    "skill": "Python"
-                },
-                {
-                    "proficiency": "Advanced",
-                    "skill": "JavaScript"
-                },
-                {
-                    "proficiency": "Advanced",
-                    "skill": "React"
-                },
-                {
-                    "proficiency": "Advanced",
-                    "skill": "Node.js"
-                },
-                {
-                    "proficiency": "Expert",
-                    "skill": "Django"
-                },
-                {
-                    "proficiency": "Advanced",
-                    "skill": "AWS"
-                },
-                {
-                    "proficiency": "Intermediate",
-                    "skill": "Docker"
-                },
-                {
-                    "proficiency": "Intermediate",
-                    "skill": "Kubernetes"
-                },
-                {
-                    "proficiency": "Advanced",
-                    "skill": "SQL"
-                },
-                {
-                    "proficiency": "Advanced",
-                    "skill": "NoSQL"
-                }
-            ],
-            "summary": "Experienced software engineer with over 5 years of experience in full stack development, specializing in Python, JavaScript, and cloud technologies. Proven track record of building scalable applications and leading cross-functional teams."
-        }
-    ],
-    "resultCode": 200,
-    "resultMessage": "Success",
-    "size": 1
-}
+      {
+        "personal_details": {
+          "address": "Чингэлтэй",
+          "lastname": "Сүхбаатар"
+        },
+        "education": [
+          {
+            "institution": "Хүмүүнлэг",
+            "start_year": 2020
+          },
+          {
+            "institution": "National univercity of Japan",
+            "start_year": 2019
+          }
+        ],
+        "experience": [
+          {
+            "company": "Tech Solutions Inc.",
+            "responsibilities": [
+              "Lead a team of 5 engineers to develop and maintain a cloud-based SaaS platform.",
+              "Implement microservices architecture to improve scalability and reduce latency.",
+              "Conduct code reviews and mentor junior developers."
+            ]
+          },
+          {
+            "company": "Tech Solutions Inc.",
+            "responsibilities": [
+              "Lead a team of 5 engineers to develop and maintain a cloud-based SaaS platform.",
+              "Implement microservices architecture to improve scalability and reduce latency.",
+              "Conduct code reviews and mentor junior developers."
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
