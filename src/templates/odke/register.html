@@ -17,23 +17,27 @@
         <div class="grid grid-cols-2 gap-4">
           <div>
             <label for="firstname" class="block text-sm font-medium text-gray-700">First Name</label>
-            <input type="text" id="firstname" name="firstname" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            <input type="text" id="firstname" name="firstname" class="mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
           </div>
           <div>
             <label for="lastname" class="block text-sm font-medium text-gray-700">Last Name</label>
-            <input type="text" id="lastname" name="lastname" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            <input type="text" id="lastname" name="lastname" class="mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
           </div>
         </div>
         <div class="mt-4">
           <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-          <input type="email" id="email" name="email" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+          <input type="email" id="email" name="email" class="mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
         </div>
         <div class="mt-4">
           <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
-          <input type="tel" id="phone" name="phone" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+          <input type="tel" id="phone" name="phone" class="mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
+        </div>
+        <div class="mt-4">
+          <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+          <input type="text" id="address" name="address" class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
         </div>
 
-        <!-- Education -->
+        <!-- Education Section -->
         <section class="mb-6">
           <h2 class="text-2xl font-semibold mb-2">Education</h2>
           <div id="educationFields">
@@ -42,11 +46,11 @@
               <div class="grid grid-cols-2 gap-4">
                 <div>
                   <label for="institution" class="block text-sm font-medium text-gray-700">Institution</label>
-                  <input type="text" name="institution" class="institution mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                  <input type="text" name="institution" class="institution mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
                 </div>
                 <div>
                   <label for="degree" class="block text-sm font-medium text-gray-700">Degree</label>
-                  <select name="degree" class="degree mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                  <select name="degree" class="degree mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
                     <option value="">-- Select Degree --</option>
                     <option value="Бакалавр">Бакалавр</option>
                     <option value="Магистр">Магистр</option>
@@ -59,15 +63,15 @@
               <div class="mt-4 grid grid-cols-2 gap-4">
                 <div>
                   <label for="major" class="block text-sm font-medium text-gray-700">Major</label>
-                  <input type="text" name="major" class="major mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                  <input type="text" name="major" class="major mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
                 </div>
                 <div>
                   <label for="start_year" class="block text-sm font-medium text-gray-700">Start Year</label>
-                  <input type="number" name="start_year" class="start_year mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                  <input type="number" name="start_year" class="start_year mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
                 </div>
                 <div>
                   <label for="graduation_year" class="block text-sm font-medium text-gray-700">Graduation Year</label>
-                  <input type="number" name="graduation_year" class="graduation_year mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                  <input type="number" name="graduation_year" class="graduation_year mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
                 </div>
               </div>
             </div>
@@ -75,93 +79,23 @@
           <button type="button" id="addEducationButton" class="mt-4 bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600">Add Education</button>
         </section>
 
-        <!-- Skills -->
-        <section class="mb-6">
-          <h2 class="text-2xl font-semibold mb-2">Skills</h2>
-          <div class="grid grid-cols-2 gap-4">
-            <div>
-              <label for="skill" class="block text-sm font-medium text-gray-700">Skill</label>
-              <input type="text" id="skill" name="skill" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
-            </div>
-            <div>
-              <label for="proficiency" class="block text-sm font-medium text-gray-700">Proficiency Level</label>
-              <select id="proficiency" name="proficiency" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
-                <option value="Beginner">Beginner</option>
-                <option value="Intermediate">Intermediate</option>
-                <option value="Advanced">Advanced</option>
-                <option value="Expert">Expert</option>
-              </select>
-            </div>
-          </div>
-        </section>
-
-        <!-- Experience -->
+        <!-- Experience Section -->
         <section class="mb-6">
           <h2 class="text-2xl font-semibold mb-2">Experience</h2>
-          <div class="grid grid-cols-2 gap-4">
-            <div>
-              <label for="company" class="block text-sm font-medium text-gray-700">Company</label>
-              <input type="text" id="company" name="company" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
-            </div>
-            <div>
-              <label for="job_title" class="block text-sm font-medium text-gray-700">Job Title</label>
-              <input type="text" id="job_title" name="job_title" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
-            </div>
-          </div>
-          <div class="mt-4">
-            <label for="start_date" class="block text-sm font-medium text-gray-700">Start Date</label>
-            <input type="date" id="start_date" name="start_date" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
-          </div>
-          <div class="mt-4">
-            <label for="end_date" class="block text-sm font-medium text-gray-700">End Date</label>
-            <input type="date" id="end_date" name="end_date" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
-          </div>
-        </section>
-
-        <!-- Certifications -->
-        <section class="mb-6">
-          <h2 class="text-2xl font-semibold mb-2">Certification</h2>
-          <div class="grid grid-cols-2 gap-4">
-            <div>
-              <label for="cer_institution" class="block text-sm font-medium text-gray-700">Institution</label>
-              <input type="text" id="cer_institution" name="cer_institution" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
-            </div>
-            <div>
-              <label for="cer_name" class="block text-sm font-medium text-gray-700">Name</label>
-              <input type="text" id="cer_name" name="cer_name" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+          <div id="experienceFields">
+            <!-- Default experience fields -->
+            <div class="experience-entry">
+              <div>
+                <label for="company" class="block text-sm font-medium text-gray-700">Company</label>
+                <input type="text" name="company" class="company mt-1 block w-full p-2 border border-gray-300 rounded-md">
+              </div>
+              <div class="mt-4">
+                <label for="responsibilities" class="block text-sm font-medium text-gray-700">Responsibilities</label>
+                <textarea name="responsibilities" class="responsibilities mt-1 block w-full p-2 border border-gray-300 rounded-md" rows="3"></textarea>
+              </div>
             </div>
           </div>
-          <div class="mt-4">
-            <label for="cer_year" class="block text-sm font-medium text-gray-700">Year</label>
-            <input type="number" id="cer_year" name="cer_year" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
-          </div>
-        </section>
-
-        <!-- Hobby -->
-        <section class="mb-6">
-          <h2 class="text-2xl font-semibold mb-2">Hobby</h2>
-          <div class="grid grid-cols-2 gap-4">
-            <div>
-              <label for="hobby" class="block text-sm font-medium text-gray-700">Hobby</label>
-              <input type="text" id="hobby" name="hobby" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
-            </div>
-          </div>
-        </section>
-
-        <!-- Languages -->
-        <section class="mb-6">
-          <h2 class="text-2xl font-semibold mb-2">Language</h2>
-          <div class="grid grid-cols-2 gap-4">
-            <div>
-              <label for="lang_proficiency" class="block text-sm font-medium text-gray-700">Proficiency Level</label>
-              <select id="lang_proficiency" name="lang_proficiency" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
-                <option value="Beginner">Beginner</option>
-                <option value="Intermediate">Intermediate</option>
-                <option value="Advanced">Advanced</option>
-                <option value="Expert">Expert</option>
-              </select>
-            </div>
-          </div>
+          <button type="button" id="addExperienceButton" class="mt-4 bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600">Add Experience</button>
         </section>
 
         <!-- Submit Button -->
@@ -179,114 +113,136 @@
   </div>
 
   <script>
- document.getElementById("addEducationButton").addEventListener("click", function () {
-  // Create a new education entry HTML block
-  const newEducationEntry = document.createElement("div");
-  newEducationEntry.classList.add("education-entry", "mt-4");
+    document.getElementById("addEducationButton").addEventListener("click", function () {
+      // Create a new education entry HTML block
+      const newEducationEntry = document.createElement("div");
+      newEducationEntry.classList.add("education-entry", "mt-4");
 
-  newEducationEntry.innerHTML = `
-    <div class="grid grid-cols-2 gap-4">
-      <div>
-        <label for="institution" class="block text-sm font-medium text-gray-700">Institution</label>
-        <input type="text" name="institution" class="institution mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
-      </div>
-      <div>
-       <label for="degree" class="block text-sm font-medium text-gray-700">Degree</label>
-                  <select name="degree" class="degree mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
-                    <option value="">-- Select Degree --</option>
-                    <option value="Бакалавр">Бакалавр</option>
-                    <option value="Магистр">Магистр</option>
-                    <option value="Доктор">Доктор</option>
-                    <option value="Бүрэн дунд">Бүрэн дунд</option>
-                    <option value="Суурь боловсрол">Суурь боловсрол</option>
-                  </select>
-                </div>
-              </div>
-              <div class="mt-4 grid grid-cols-2 gap-4">
-                <div>
-                  <label for="major" class="block text-sm font-medium text-gray-700">Major</label>
-                  <input type="text" name="major" class="major mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
-                </div>
-      </div>
-    </div>
-    <div class="mt-4 grid grid-cols-2 gap-4">
-      <div>
-        <label for="start_year" class="block text-sm font-medium text-gray-700">Start Year</label>
-        <input type="number" name="start_year" class="start_year mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
-      </div>
-      <div>
-        <label for="graduation_year" class="block text-sm font-medium text-gray-700">Graduation Year</label>
-        <input type="number" name="graduation_year" class="graduation_year mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
-      </div>
-    </div>
-  `;
+      newEducationEntry.innerHTML = `
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label for="institution" class="block text-sm font-medium text-gray-700">Institution</label>
+            <input type="text" name="institution" class="institution mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
+          </div>
+          <div>
+            <label for="degree" class="block text-sm font-medium text-gray-700">Degree</label>
+            <select name="degree" class="degree mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
+              <option value="">-- Select Degree --</option>
+              <option value="Бакалавр">Бакалавр</option>
+              <option value="Магистр">Магистр</option>
+              <option value="Доктор">Доктор</option>
+              <option value="Бүрэн дунд">Бүрэн дунд</option>
+              <option value="Суурь боловсрол">Суурь боловсрол</option>
+            </select>
+          </div>
+        </div>
+        <div class="mt-4 grid grid-cols-2 gap-4">
+          <div>
+            <label for="major" class="block text-sm font-medium text-gray-700">Major</label>
+            <input type="text" name="major" class="major mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
+          </div>
+        </div>
+        <div class="mt-4 grid grid-cols-2 gap-4">
+          <div>
+            <label for="start_year" class="block text-sm font-medium text-gray-700">Start Year</label>
+            <input type="number" name="start_year" class="start_year mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
+          </div>
+          <div>
+            <label for="graduation_year" class="block text-sm font-medium text-gray-700">Graduation Year</label>
+            <input type="number" name="graduation_year" class="graduation_year mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
+          </div>
+        </div>
+      `;
 
-  // Append the new education entry to the list
-  document.getElementById("educationFields").appendChild(newEducationEntry);
-});
-
-document.getElementById("registerForm").addEventListener("submit", function (event) {
-  event.preventDefault(); // Prevent default form submission
-
-  // Collect education data
-  const educationEntries = document.querySelectorAll(".education-entry");
-  let educationList = [];
-
-  educationEntries.forEach(function (entry) {
-    const institution = entry.querySelector(".institution").value;
-    const degree = entry.querySelector(".degree").value;
-    const major = entry.querySelector(".major").value;
-    const start_year = entry.querySelector(".start_year").value;
-    const graduation_year = entry.querySelector(".graduation_year").value;
-
-    // Push each entry as an object into the education list
-    educationList.push({
-      institution: institution,
-      degree: degree,
-      major: major,
-      start_year: parseInt(start_year),
-      graduation_year: parseInt(graduation_year)
+      document.getElementById("educationFields").appendChild(newEducationEntry);
     });
-  });
 
-  // Collect all form data (Example: you can collect other data similarly)
-  const formData = {
-    firstname: document.getElementById("firstname").value,
-    lastname: document.getElementById("lastname").value,
-    email: document.getElementById("email").value,
-    phone: document.getElementById("phone").value,
-    education: educationList // Education section as a list of objects
-  };
+    document.getElementById("addExperienceButton").addEventListener("click", function () {
+      // Create a new experience entry HTML block
+      const newExperienceEntry = document.createElement("div");
+      newExperienceEntry.classList.add("experience-entry", "mt-4");
 
-  // Output the collected data as JSON (for debugging)
-  console.log(JSON.stringify(formData, null, 2));
+      newExperienceEntry.innerHTML = `
+        <div>
+          <label for="company" class="block text-sm font-medium text-gray-700">Company</label>
+          <input type="text" name="company" class="company mt-1 block w-full p-2 border border-gray-300 rounded-md">
+        </div>
+        <div class="mt-4">
+          <label for="responsibilities" class="block text-sm font-medium text-gray-700">Responsibilities</label>
+          <textarea name="responsibilities" class="responsibilities mt-1 block w-full p-2 border border-gray-300 rounded-md" rows="3"></textarea>
+        </div>
+      `;
 
-  // Display submitted data in the output section
-  const outputSection = document.getElementById("output");
-  const dataOutput = document.getElementById("dataOutput");
-  dataOutput.textContent = JSON.stringify(formData, null, 2);
-  outputSection.classList.remove("hidden");
+      document.getElementById("experienceFields").appendChild(newExperienceEntry);
+    });
 
-  // Here you can submit the form data to your server (via POST request)
-  /*
-  fetch('/submit-url', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'X-CSRFToken': getCookie('csrftoken')
-    },
-    body: JSON.stringify(formData)
-  })
-  .then(response => response.json())
-  .then(data => {
-    console.log('Success:', data);
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
-  */
-});
+    document.getElementById("registerForm").addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent default form submission
 
+      // Collect education data
+      const educationEntries = document.querySelectorAll(".education-entry");
+      let educationList = [];
+
+      educationEntries.forEach(function (entry) {
+        const institution = entry.querySelector(".institution").value;
+        const start_year = entry.querySelector(".start_year").value;
+
+        educationList.push({
+          institution: institution,
+          start_year: parseInt(start_year)
+        });
+      });
+
+      // Collect experience data
+      const experienceEntries = document.querySelectorAll(".experience-entry");
+      let experienceList = [];
+
+      experienceEntries.forEach(function (entry) {
+        const company = entry.querySelector(".company").value;
+        const responsibilities = entry.querySelector(".responsibilities").value.split('\n');
+
+        experienceList.push({
+          company: company,
+          responsibilities: responsibilities
+        });
+      });
+
+      // Collect all form data
+      const formData = {
+        action: "addCv", // Add the action field
+        personal_details: {
+          address: document.getElementById("address").value,
+          lastname: document.getElementById("lastname").value,
+        },
+        education: educationList,
+        experience: experienceList
+      };
+
+      // Output the collected data as JSON (for debugging)
+      console.log(JSON.stringify(formData, null, 2));
+
+      // Display submitted data in the output section
+      const outputSection = document.getElementById("output");
+      const dataOutput = document.getElementById("dataOutput");
+      dataOutput.textContent = JSON.stringify(formData, null, 2);
+      outputSection.classList.remove("hidden");
+
+      // Send data to server (replace with your own endpoint)
+      fetch('/your-endpoint-url', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    });
   </script>
 </body>
 </html>

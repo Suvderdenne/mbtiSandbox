@@ -1,0 +1,111 @@
+<script>
+    document.getElementById("addEducationButton").addEventListener("click", function () {
+     // Create a new education entry HTML block
+     const newEducationEntry = document.createElement("div");
+     newEducationEntry.classList.add("education-entry", "mt-4");
+   
+     newEducationEntry.innerHTML = `
+       <div class="grid grid-cols-2 gap-4">
+         <div>
+           <label for="institution" class="block text-sm font-medium text-gray-700">Institution</label>
+           <input type="text" name="institution" class="institution mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
+         </div>
+         <div>
+          <label for="degree" class="block text-sm font-medium text-gray-700">Degree</label>
+                     <select name="degree" class="degree mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
+                       <option value="">-- Select Degree --</option>
+                       <option value="Бакалавр">Бакалавр</option>
+                       <option value="Магистр">Магистр</option>
+                       <option value="Доктор">Доктор</option>
+                       <option value="Бүрэн дунд">Бүрэн дунд</option>
+                       <option value="Суурь боловсрол">Суурь боловсрол</option>
+                     </select>
+                   </div>
+                 </div>
+                 <div class="mt-4 grid grid-cols-2 gap-4">
+                   <div>
+                     <label for="major" class="block text-sm font-medium text-gray-700">Major</label>
+                     <input type="text" name="major" class="major mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
+                   </div>
+         </div>
+       </div>
+       <div class="mt-4 grid grid-cols-2 gap-4">
+         <div>
+           <label for="start_year" class="block text-sm font-medium text-gray-700">Start Year</label>
+           <input type="number" name="start_year" class="start_year mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
+         </div>
+         <div>
+           <label for="graduation_year" class="block text-sm font-medium text-gray-700">Graduation Year</label>
+           <input type="number" name="graduation_year" class="graduation_year mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
+         </div>
+       </div>
+     `;
+   
+     // Append the new education entry to the list
+     document.getElementById("educationFields").appendChild(newEducationEntry);
+   });
+   
+   document.getElementById("registerForm").addEventListener("submit", function (event) {
+     event.preventDefault(); // Prevent default form submission
+   
+     // Collect education data
+     const educationEntries = document.querySelectorAll(".education-entry");
+     let educationList = [];
+   
+     educationEntries.forEach(function (entry) {
+       const institution = entry.querySelector(".institution").value;
+       //const degree = entry.querySelector(".degree").value;
+       //const major = entry.querySelector(".major").value;
+       const start_year = entry.querySelector(".start_year").value;
+       //const graduation_year = entry.querySelector(".graduation_year").value;
+   
+       // Push each entry as an object into the education list
+       educationList.push({
+         institution: institution,
+         //degree: degree,
+         //major: major,
+         start_year: parseInt(start_year),
+         //graduation_year: parseInt(graduation_year)
+       });
+     });
+   
+     // Collect all form data (Example: you can collect other data similarly)
+     const formData = {
+       //firstname: document.getElementById("firstname").value,
+       lastname: document.getElementById("lastname").value,
+       address: document.getElementById("address").value,
+       //email: document.getElementById("email").value,
+       //phone: document.getElementById("phone").value,
+       education: educationList // Education section as a list of objects
+     };
+   
+     // Output the collected data as JSON (for debugging)
+     console.log(JSON.stringify(formData, null, 2));
+   
+     // Display submitted data in the output section
+     const outputSection = document.getElementById("output");
+     const dataOutput = document.getElementById("dataOutput");
+     dataOutput.textContent = JSON.stringify(formData, null, 2);
+     outputSection.classList.remove("hidden");
+   
+     // Here you can submit the form data to your server (via POST request)
+     /*
+     fetch('/submit-url', {
+       method: 'POST',
+       headers: {
+         'Content-Type': 'application/json',
+         'X-CSRFToken': getCookie('csrftoken')
+       },
+       body: JSON.stringify(formData)
+     })
+     .then(response => response.json())
+     .then(data => {
+       console.log('Success:', data);
+     })
+     .catch(error => {
+       console.error('Error:', error);
+     });
+     */
+   });
+   
+     </script>
