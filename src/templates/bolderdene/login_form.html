@@ -76,10 +76,11 @@
         .then((response) => response.json())
         .then((data) => {
           if (data.resultCode === 200) {
-            const pid = data.pid;
+            const pid = data.data[0].pid
             alert(data.data[0].success)
             // Store the pid for later use, such as in localStorage or sessionStorage
             localStorage.setItem('pid', pid);
+
             window.location.href = "../lhavgabaatar/index.html"; // Redirect to the home page or another page
           } else {
             alert(data.data[0].error);

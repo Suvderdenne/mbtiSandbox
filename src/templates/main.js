@@ -9,11 +9,12 @@ fetch("http://127.0.0.1:8000/api/", {
   },
   body: JSON.stringify({
     action: "resume",
-    pid: 1,
+    pid: pid,
   }),
 })
   .then((response) => response.json())
   .then((data) => {
+    console.log(data)
     document.getElementById("lastname").innerText =
       data.data[0].personal_details.lastname;
     document.getElementById("address").innerText +=
