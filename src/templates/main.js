@@ -1,7 +1,6 @@
-const pid = localStorage.getItem('pid');
+const pid = localStorage.getItem("pid");
 
-
-fetch("http://127.0.0.1:8000/api/", {
+fetch("http://whoism.mandakh.org/api/", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
@@ -14,17 +13,17 @@ fetch("http://127.0.0.1:8000/api/", {
 })
   .then((response) => response.json())
   .then((data) => {
-    console.log(data)
+
     document.getElementById("lastname").innerText =
       data.data[0].personal_details.lastname;
     document.getElementById("address").innerText +=
       data.data[0].personal_details.address;
-
+      
     if ("experience" in data.data[0]) {
       const experienceList = document.getElementById("experience");
       experienceList.innerHTML = "<h2>Experience</h2>";
       data.data[0].experience.forEach((exp) => {
-        console.log(exp)
+        console.log(exp);
         const li = document.createElement("li");
 
         li.innerHTML = ` <strong>${exp.company}</strong>

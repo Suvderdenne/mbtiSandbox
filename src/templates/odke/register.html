@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume Form</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-100 p-6">
   <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-    <h1 class="text-3xl font-bold mb-4">Resume Form</h1> 
+    <h1 class="text-3xl font-bold mb-4">Resume Form</h1>
 
     <!-- Personal Details -->
     <section class="mb-6">
@@ -17,24 +19,51 @@
         <div class="grid grid-cols-2 gap-4">
           <div>
             <label for="firstname" class="block text-sm font-medium text-gray-700">First Name</label>
-            <input type="text" id="firstname" name="firstname" class="mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
+            <input type="text" id="firstname" name="firstname"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
           </div>
           <div>
             <label for="lastname" class="block text-sm font-medium text-gray-700">Last Name</label>
-            <input type="text" id="lastname" name="lastname" class="mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
+            <input type="text" id="lastname" name="lastname"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
           </div>
+
+
+
+          <div>
+            <label for="username" class="block text-sm font-medium text-gray-700">username</label>
+            <input type="text" id="username" name="username" required
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
+          </div>
+          <div>
+            <label for="password" class="block text-sm font-medium text-gray-700">password</label>
+            <input type="password" id="password" name="password" required
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
+          </div>
+          <div>
+            <label for="repassword" class="block text-sm font-medium text-gray-700">repassword</label>
+            <input type="password" id="repassword" name="repassword" required
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
+          </div>
+
+
+
+
+
+
         </div>
         <div class="mt-4">
           <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-          <input type="email" id="email" name="email" class="mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
+          <input type="email" id="email" name="email" class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
         </div>
         <div class="mt-4">
           <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
-          <input type="tel" id="phone" name="phone" class="mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
+          <input type="tel" id="phone" name="phone" class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
         </div>
         <div class="mt-4">
           <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
-          <input type="text" id="address" name="address" class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
+          <input type="text" id="address" name="address"
+            class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
         </div>
 
         <!-- Education Section -->
@@ -46,11 +75,12 @@
               <div class="grid grid-cols-2 gap-4">
                 <div>
                   <label for="institution" class="block text-sm font-medium text-gray-700">Institution</label>
-                  <input type="text" name="institution" class="institution mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
+                  <input type="text" name="institution"
+                    class="institution mt-1 block w-full p-2 border border-gray-300 rounded-md">
                 </div>
                 <div>
                   <label for="degree" class="block text-sm font-medium text-gray-700">Degree</label>
-                  <select name="degree" class="degree mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
+                  <select name="degree" class="degree mt-1 block w-full p-2 border border-gray-300 rounded-md">
                     <option value="">-- Select Degree --</option>
                     <option value="Бакалавр">Бакалавр</option>
                     <option value="Магистр">Магистр</option>
@@ -63,20 +93,23 @@
               <div class="mt-4 grid grid-cols-2 gap-4">
                 <div>
                   <label for="major" class="block text-sm font-medium text-gray-700">Major</label>
-                  <input type="text" name="major" class="major mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
+                  <input type="text" name="major" class="major mt-1 block w-full p-2 border border-gray-300 rounded-md">
                 </div>
                 <div>
                   <label for="start_year" class="block text-sm font-medium text-gray-700">Start Year</label>
-                  <input type="number" name="start_year" class="start_year mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
+                  <input type="number" name="start_year"
+                    class="start_year mt-1 block w-full p-2 border border-gray-300 rounded-md">
                 </div>
                 <div>
                   <label for="graduation_year" class="block text-sm font-medium text-gray-700">Graduation Year</label>
-                  <input type="number" name="graduation_year" class="graduation_year mt-1 block w-full p-2 border border-gray-300 rounded-md"   >
+                  <input type="number" name="graduation_year"
+                    class="graduation_year mt-1 block w-full p-2 border border-gray-300 rounded-md">
                 </div>
               </div>
             </div>
           </div>
-          <button type="button" id="addEducationButton" class="mt-4 bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600">Add Education</button>
+          <button type="button" id="addEducationButton"
+            class="mt-4 bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600">Add Education</button>
         </section>
 
         <!-- Experience Section -->
@@ -87,20 +120,24 @@
             <div class="experience-entry">
               <div>
                 <label for="company" class="block text-sm font-medium text-gray-700">Company</label>
-                <input type="text" name="company" class="company mt-1 block w-full p-2 border border-gray-300 rounded-md">
+                <input type="text" name="company"
+                  class="company mt-1 block w-full p-2 border border-gray-300 rounded-md">
               </div>
               <div class="mt-4">
                 <label for="responsibilities" class="block text-sm font-medium text-gray-700">Responsibilities</label>
-                <textarea name="responsibilities" class="responsibilities mt-1 block w-full p-2 border border-gray-300 rounded-md" rows="3"></textarea>
+                <textarea name="responsibilities"
+                  class="responsibilities mt-1 block w-full p-2 border border-gray-300 rounded-md" rows="3"></textarea>
               </div>
             </div>
           </div>
-          <button type="button" id="addExperienceButton" class="mt-4 bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600">Add Experience</button>
+          <button type="button" id="addExperienceButton"
+            class="mt-4 bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600">Add Experience</button>
         </section>
 
         <!-- Submit Button -->
         <div class="mt-6">
-          <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Submit</button>
+          <button type="submit"
+            class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Submit</button>
         </div>
 
         <!-- Output Section -->
@@ -110,6 +147,7 @@
         </section>
       </form>
     </section>
+    <a href="../bolderdene/logout.html">Back</a>
   </div>
 
   <script>
@@ -207,12 +245,20 @@
         });
       });
 
+      password = document.getElementById("password").value;
+      repassword = document.getElementById("repassword").value;
+      if (repassword !== password) {
+        return alert('password таарсангүй')
+      }
+
       // Collect all form data
       const formData = {
         action: "addCv", // Add the action field
         personal_details: {
           address: document.getElementById("address").value,
           lastname: document.getElementById("lastname").value,
+          username: document.getElementById("username").value,
+          password: password
         },
         education: educationList,
         experience: experienceList
@@ -235,14 +281,19 @@
         },
         body: JSON.stringify(formData)
       })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Success:', data);
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
+        .then(response => response.json())
+        .then(data => {
+          if (data.resultCode === 301) {
+            alert(data.data[0].error)
+          }
+          else if (data.resultCode === 200)
+            alert(data.data[0].success)
+        })
+        .catch(error => {
+          console.error('Сервисийн алдаа:', error);
+        });
     });
   </script>
 </body>
+
 </html>
